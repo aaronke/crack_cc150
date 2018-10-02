@@ -1,6 +1,6 @@
 // Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
 
-public LinkedListNode KthToLast(LinkedListNode root, int k) {
+public LinkedListNode kthToLast(LinkedListNode root, int k) {
 	if (root == null) throw InvalidParameterException("invalid root node")
 	LinkedListNode cur = root, fast = root;
 	for (int i = 0; i < k; i++) {
