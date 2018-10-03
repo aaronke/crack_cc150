@@ -7,6 +7,7 @@
 // Input: A -> B -> C - > D -> E -> C [the same C as earlier)
 // Output: C
 
+
 public LinkedListNode loopDetection(LinkedListNode node) {
 	if (node == null || node.next == null) return null;
 	LinkedListNode fast = node, slow = node;
