@@ -2,7 +2,7 @@
 // FOLLOW UP
 // How would you solve this problem if a temporary buffer is not allowed?
 
-public void RemoveDuplicates(LinkedListNode root) {
+public void removeDuplicates(LinkedListNode root) {
 	HashSet<Integer> map = new HashSet<>();
 	LinkedListNode pre = root, cur = root;
 	while (cur) {
@@ -18,7 +18,7 @@ public void RemoveDuplicates(LinkedListNode root) {
 
 // Follow up
 
-public void RemoveDuplicates2(LinkedListNode root) {
+public void removeDuplicates2(LinkedListNode root) {
 	if (root == null || root.next == null) return;
 	LinkedListNode cur = root, iNode = cur.next, pre = root;
 	while (cur && cur.next) {
