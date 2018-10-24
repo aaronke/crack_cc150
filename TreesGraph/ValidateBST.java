@@ -24,3 +24,19 @@ private void inOrder(TreeNode root, ArrayList<Integer> list) {
 	list.add(root.val);
 	inOrder(root.right, list);
 }
+
+// Min, Max solution
+
+public boolean checkValidateBST2(TreeNode root) {
+	return checkValidateHelper(root, null, null);
+}
+
+private boolean checkValidateHelper(TreeNode root, Integer min, Integer max) {
+	if(root == null) return true;
+	if((min != null && root.val <= min) || (max != null && root.val >= max))
+		return false;
+	if (!checkValidateHelper(root.left, min, root.val) || checkValidateHelper(root.right, root.val, max)) {
+		return false;
+	}
+	return true;
+}
